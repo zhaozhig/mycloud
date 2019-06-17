@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: nacos-server
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  zipkin:
+
+    #他不断的去跟踪所有服务，
+    discovery-client-enabled: false

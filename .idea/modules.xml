@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/getway/getway.iml" filepath="$PROJECT_DIR$/getway/getway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mycloud.iml" filepath="$PROJECT_DIR$/mycloud.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-client/nacos-client.iml" filepath="$PROJECT_DIR$/nacos-client/nacos-client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nacos-server/nacos-server.iml" filepath="$PROJECT_DIR$/nacos-server/nacos-server.iml" />
+    </modules>
+  </component>
+</project>
