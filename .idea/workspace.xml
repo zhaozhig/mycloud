@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e68a1aa5-02ab-4927-bfac-644944a1cdea" name="Default Changelist" comment="" />
+    <list default="true" id="e68a1aa5-02ab-4927-bfac-644944a1cdea" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/nacos-server/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,17 +20,20 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/getway/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+            <state relative-caret-position="247">
+              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -65,10 +71,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="88" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="539" />
     <option name="y" value="349" />
-    <option name="width" value="2005" />
+    <option name="width" value="1554" />
     <option name="height" value="885" />
   </component>
   <component name="ProjectView">
@@ -76,7 +82,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -114,10 +119,22 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="mycloud" type="58d84e3e:PackageViewProjectNode" />
+              <item name="getway" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -126,6 +143,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -147,6 +165,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NacosApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="nacos-server" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.nacosserver.NacosApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="NacosClientApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="nacos-client" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.nacosclient.NacosClientApplication" />
@@ -157,6 +182,7 @@
     <list>
       <item itemvalue="Spring Boot.NacosClientApplication" />
       <item itemvalue="Spring Boot.GetwayApplication" />
+      <item itemvalue="Spring Boot.NacosApplication" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -171,17 +197,17 @@
       <updated>1560437305854</updated>
       <workItem from="1560437306967" duration="467000" />
       <workItem from="1560575701599" duration="2767000" />
+      <workItem from="1560776627330" duration="408000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3234000" />
+    <option name="totallyTimeSpent" value="3642000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="88" y="349" width="2005" height="885" extended-state="1" />
-    <editor active="true" />
+    <frame x="539" y="349" width="1554" height="885" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.325964" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.42904952" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -199,10 +225,10 @@
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" visible="true" weight="0.5625" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.5625" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
-      <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.3288948" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -218,14 +244,11 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/nacos-server/src/main/java/com/example/nacos/NacosApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="7" selection-start-line="7" selection-end-line="7" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/nacos-server/src/main/java/com/example/nacos/NacosApplication.java" />
     <entry file="file://$PROJECT_DIR$/nacos-server/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="817">
@@ -270,8 +293,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/getway/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+        <state relative-caret-position="247">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
