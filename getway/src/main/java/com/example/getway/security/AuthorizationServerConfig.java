@@ -55,9 +55,9 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     @Override
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
-                .withClient("android")//客户端账户
-                .scopes("xx")//作用域
-                .secret("android")//客户端密码
+                .withClient("admin")//客户端账户
+                .scopes("getway")//作用域
+                .secret("admin")//客户端密码
                 .authorizedGrantTypes("password", "authorization_code", "refresh_token")//授权方式
                 .and()//不同的客户端链接
                 .withClient("webapp")

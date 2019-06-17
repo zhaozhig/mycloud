@@ -26,6 +26,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  *jsr250Enabled ：决定 JSR-250 annotations 注解[@RolesAllowed..] 是否可用.
  */
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
     //用户信息业务类
    /* @Bean
     public UserDetailsService userDetailsService() {
