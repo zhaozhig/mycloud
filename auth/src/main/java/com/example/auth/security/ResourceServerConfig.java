@@ -1,4 +1,4 @@
-package com.example.getway.security;
+package com.example.auth.security;
 
 
 import org.springframework.context.annotation.Configuration;
