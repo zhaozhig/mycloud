@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: nacos-client
+    name: getway
   cloud:
     nacos:
       discovery:
@@ -16,8 +16,8 @@ spring:
             enabled: true
         routes:
         # This route rule used to forward request to activity server
-        - id: auth-service
-          uri: lb://auth-service
+        - id: auth
+          uri: lb://auth
           predicates:
           - Path=/auth/**
           filters:

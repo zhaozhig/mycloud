@@ -7,7 +7,7 @@ server:
 
 spring:
   application:
-    name: nacos-client
+    name: auth
   cloud:
     nacos:
       discovery:
@@ -24,7 +24,7 @@ spring:
     username: root
     password: admin
 
-  #redis≈‰÷√–≈œ¢
+  #redis
   redis:
     database: 3
     host: 127.0.0.1
