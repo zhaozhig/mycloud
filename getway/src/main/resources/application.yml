@@ -1,22 +1,33 @@
 
 server:
-    port: 8082
+  port: 8082
 
 spring:
-application:
-name: nacos-server
-cloud:
-nacos:
-discovery:
-server-addr: 127.0.0.1:8848
-zipkin:
+  application:
+    name: nacos-client
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
 
-#他不断的去跟踪所有服务，
-discovery-client-enabled: false
+  gateway:
+        discovery:
+          locator:
+            enabled: true
+        routes:
+        # This route rule used to forward request to activity server
+        - id: auth-service
+          uri: lb://auth-service
+          predicates:
+          - Path=/auth/**
+          filters:
+          - StripPrefix=1
 
 security:
-oauth2:
-resource:
-id: 服务id
-user-info-uri: http://验证服务ip:port/用户信息接口
-prefer-token-info: false
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8083/getAccount
+      prefer-token-info: false
+    authorization:
+      check-token-access: http://localhost:8083/oauth/check_token
+
