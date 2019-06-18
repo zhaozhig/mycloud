@@ -7,3 +7,26 @@ spring:
     nacos:
       discovery:
         server-addr: 127.0.0.1:8848
+
+
+  #### database config
+  datasource:
+    #oauth_db
+    hikari:
+      maximum-pool-size: 10
+      connection-test-query: 'SELECT 1'
+    url: 'jdbc:mysql://101.201.181.146:3306/opensk_account?useUnicode=true&characterEncoding=utf-8&useSSL=false'
+    username: root
+    password: admin
+
+  #redis≈‰÷√–≈œ¢
+  redis:
+    database: 3
+    host: 127.0.0.1
+    port: 6379
+    #password: 'openl'
+    lettuce:
+      pool:
+        max-active: 10
+        max-wait: 10s
+

@@ -26,7 +26,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     RedisConnectionFactory redisConnectionFactory;
     //用户信息相关的实现
     @Autowired
-    private UserDetailsService userDetailsService;
+    private CustomUserDetailService userDetailsService;
 
     //token存放位置
     @Bean
@@ -56,13 +56,15 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
     public void configure(ClientDetailsServiceConfigurer clients) throws Exception {
         clients.inMemory()
                 .withClient("admin")//客户端账户
-                .scopes("getway")//作用域
-                .secret("admin")//客户端密码
-                .authorizedGrantTypes("password", "authorization_code", "refresh_token")//授权方式
-                .and()//不同的客户端链接
+                .scopes("mgt")//作用域
+                .secret("123456")//客户端密码
+                .authorizedGrantTypes("password","refresh_token")//授权方式
+                .refreshTokenValiditySeconds(604800)
+                .accessTokenValiditySeconds(72000);
+                /*.and()//不同的客户端链接
                 .withClient("webapp")
                 .scopes("xx")
-                .authorizedGrantTypes("implicit");
+                .authorizedGrantTypes("implicit");*/
     }
 
 }
