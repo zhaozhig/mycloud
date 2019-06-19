@@ -13,8 +13,9 @@
 
     <modules>
 
-       <!-- <module>config</module>
-        <module>gateway</module>-->
+        <module>auth</module>
+        <module>getway</module>
+        <module>nacos-client</module>
         <module>nacos-server</module>
 
     </modules>

@@ -18,15 +18,6 @@ import org.springframework.security.crypto.password.PasswordEncoder;
  * 安全配置相关
  */
 @Configuration
-@EnableWebSecurity
-@EnableGlobalMethodSecurity(prePostEnabled = true)
-/**
- *
- *注意： @EnableGlobalMethodSecurity 可以配置多个参数:
- *prePostEnabled :决定Spring Security的前注解是否可用 [@PreAuthorize,@PostAuthorize,..] 此处表明可用
- *secureEnabled : 决定是否Spring Security的保障注解 [@Secured] 是否可用
- *jsr250Enabled ：决定 JSR-250 annotations 注解[@RolesAllowed..] 是否可用.
- */
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 
