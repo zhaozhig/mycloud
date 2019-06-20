@@ -1,12 +1,17 @@
 package com.example.getway.filter;
 
+import com.example.getway.tools.MgtWhiteList;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
+
+
 
 /**
  * @author zhaozg
@@ -17,25 +22,46 @@ import reactor.core.publisher.Mono;
 @Component
 public class CustomGlobalFileter implements GlobalFilter,Ordered {
 
-
-    private static final String COUNT_Start_TIME = "countStartTime";
+    @Autowired
+    MgtWhiteList mgtWhiteList;
 
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        exchange.getAttributes().put(COUNT_Start_TIME, System.currentTimeMillis());
-        return chain.filter(exchange).then(
-                Mono.fromRunnable(() -> {
-                    Long startTime = exchange.getAttribute(COUNT_Start_TIME);
-                    Long endTime=(System.currentTimeMillis() - startTime);
-                    if (startTime != null) {
-                        log.info(exchange.getRequest().getURI().getRawPath() + ": " + endTime + "ms");
-                    }
-                })
-        );
+
+        String token = exchange.getRequest().getQueryParams().getFirst("token");
+        if (token == null || token.isEmpty()) {
+            log.info("token is empty...");
+            exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
+            return exchange.getResponse().setComplete();
+        }
+        String uri = "";
+
+        /** 1. 验证 anon 白名单 **/
+        boolean isOpen = mgtWhiteList.isOpenUrl(uri);
+
+        if (isOpen) {
+            return null;
+        } else {
+
+           /* Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+
+            Authentication cation = null;
+            if (authentication != null && authentication instanceof OAuth2Authentication) {
+
+                cation = ((OAuth2Authentication) authentication).getUserAuthentication();
+
+            } else {
+
+            }*/
+
+        }
+
+        return chain.filter(exchange);
     }
 
+
     @Override
-    public int getOrder() {
+    public int getOrder () {
         return Ordered.LOWEST_PRECEDENCE;
     }
 
