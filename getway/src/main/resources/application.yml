@@ -15,11 +15,27 @@ spring:
           locator:
             enabled: true
         routes:
-        # This route rule used to forward request to activity server
-        - id: auth
+
+        - id: auth-server
+        # 重点！/info必须使用http进行转发，lb代表从注册中心获取服务
           uri: lb://auth
+          # 重点！转发该路径！,/auth/**,
           predicates:
-          - Path=/auth/**
+          - Path=/auth-service/**
+          filters:
+          - StripPrefix=1
+
+        - id: nacos-server
+          uri: lb://nacos-server
+          predicates:
+          - Path=/nacos-server-service/**
+          filters:
+          - StripPrefix=1
+
+        - id: nacos-client
+          uri: lb://nacos-client
+          predicates:
+          - Path=/nacos-client-service/**
           filters:
           - StripPrefix=1
 
