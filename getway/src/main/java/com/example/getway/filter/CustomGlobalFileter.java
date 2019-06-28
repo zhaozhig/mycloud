@@ -28,12 +28,12 @@ public class CustomGlobalFileter implements GlobalFilter,Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 
-        String token = exchange.getRequest().getQueryParams().getFirst("token");
+        /*String token = exchange.getRequest().getQueryParams().getFirst("token");
         if (token == null || token.isEmpty()) {
             log.info("token is empty...");
             exchange.getResponse().setStatusCode(HttpStatus.UNAUTHORIZED);
             return exchange.getResponse().setComplete();
-        }
+        }*/
         String uri = "";
 
         /** 1. 验证 anon 白名单 **/

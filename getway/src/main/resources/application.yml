@@ -10,13 +10,10 @@ spring:
       discovery:
         server-addr: 127.0.0.1:8848
 
-  gateway:
-        discovery:
-          locator:
-            enabled: true
+    gateway:
         routes:
 
-        - id: auth-server
+        - id: authapi
         # 重点！/info必须使用http进行转发，lb代表从注册中心获取服务
           uri: lb://auth
           # 重点！转发该路径！,/auth/**,
@@ -25,14 +22,14 @@ spring:
           filters:
           - StripPrefix=1
 
-        - id: nacos-server
+        - id: serverapi
           uri: lb://nacos-server
           predicates:
           - Path=/nacos-server-service/**
           filters:
           - StripPrefix=1
 
-        - id: nacos-client
+        - id: clientapi
           uri: lb://nacos-client
           predicates:
           - Path=/nacos-client-service/**
