@@ -7,6 +7,9 @@ import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
 import org.springframework.core.Ordered;
 import org.springframework.http.HttpStatus;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.oauth2.provider.OAuth2Authentication;
 import org.springframework.stereotype.Component;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
@@ -43,7 +46,7 @@ public class CustomGlobalFileter implements GlobalFilter,Ordered {
             return null;
         } else {
 
-           /* Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
 
             Authentication cation = null;
             if (authentication != null && authentication instanceof OAuth2Authentication) {
@@ -52,7 +55,7 @@ public class CustomGlobalFileter implements GlobalFilter,Ordered {
 
             } else {
 
-            }*/
+            }
 
         }
 
