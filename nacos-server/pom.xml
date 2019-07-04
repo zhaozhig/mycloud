@@ -22,6 +22,28 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-scratchpad</artifactId>
+            <version>3.17</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>3.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.xmlgraphics</groupId>
+            <artifactId>batik-codec</artifactId>
+            <version>1.7</version>
+        </dependency>
+        <dependency>
+            <groupId>net.arnx</groupId>
+            <artifactId>wmf2svg</artifactId>
+            <version>0.9.8</version>
+        </dependency>
+
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
