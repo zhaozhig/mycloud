@@ -1,14 +1,15 @@
 package com.example.nacosserver.controller;
 
 
-import com.alibaba.fastjson.JSON;
-import org.apache.poi.hwpf.HWPFDocument;
-import org.apache.poi.hwpf.extractor.WordExtractor;
-import org.apache.poi.xwpf.usermodel.XWPFDocument;
-import org.apache.poi.xwpf.usermodel.XWPFParagraph;
-import org.apache.poi.xwpf.usermodel.XWPFPictureData;
 
-import java.io.FileInputStream;
+import org.apache.batik.transcoder.Transcoder;
+import org.apache.batik.transcoder.TranscoderInput;
+import org.apache.batik.transcoder.TranscoderOutput;
+import org.apache.batik.transcoder.image.PNGTranscoder;
+
+
+
+import java.io.*;
 import java.util.List;
 
 public class BaseController {
@@ -16,25 +17,30 @@ public class BaseController {
 
     public static void main(String[] args) {
 
-       try{
 
+        File svg = new File("D:\\导入.svg");
 
-           XWPFDocument document = new XWPFDocument(new FileInputStream("D:\\导入.docx")).getXWPFDocument();
+        File png = new File("D:\\副本.png");
+        InputStream in = null;
+        OutputStream out = null;
+        try {
 
-           List<XWPFPictureData> allPictures = document.getAllPictures();
+            in = new FileInputStream(svg);
+            out = new FileOutputStream(png);
+            out = new BufferedOutputStream(out);
 
-           for(XWPFPictureData ds : allPictures){
-               byte[] data = ds.getData();
-               String fileName = ds.getFileName();
+            Transcoder transcoder = new PNGTranscoder();
+            TranscoderInput input = new TranscoderInput(in);
+            TranscoderOutput output = new TranscoderOutput(out);
+            transcoder.transcode(input, output);
+        }catch(Exception e){
+            e.printStackTrace();
+        } finally {
 
-               System.out.println(fileName);
-           }
-
-
-       }catch(Exception e){
-
-       }
+        }
 
 
     }
+
+
 }
