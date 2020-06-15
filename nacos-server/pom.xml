@@ -36,7 +36,7 @@
         <dependency><groupId>batik</groupId><artifactId>batik-util</artifactId><version>1.6</version></dependency>
         <dependency><groupId>batik</groupId><artifactId>batik-xml</artifactId><version>1.6</version></dependency>
 
-        <dependency><groupId>xerces</groupId><artifactId>xercesImpl</artifactId><version>2.5.0</version></dependency>
+        <dependency><groupId>xerces</groupId><artifactId>xercesImpl</artifactId><version>2.12.0</version></dependency>
         <dependency><groupId>xml-apis</groupId><artifactId>xmlParserAPIs</artifactId><version>2.0.2</version></dependency>
 
         <dependency><groupId>org.axsl.org.w3c.dom.svg</groupId><artifactId>svg-dom-java</artifactId><version>1.1</version></dependency>
